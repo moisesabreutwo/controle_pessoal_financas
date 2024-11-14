@@ -52,13 +52,13 @@
             </div>
             <div class="col-md-3">
                 <div class="feature-box bg-secondary ">
-                    <h5>Receber alertas automáticos</h5>
+                    <h5>Receber alertas automáticos &ensp; &ensp; &ensp;</h5>
                     <p class="vantagens text-white">Alertas automáticos são emitidos conforme as definições que o cliente já informou para as despesas e receitas atuais.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="feature-box bg-secondary ">
-                    <h5>Extrair relatórios periódicos</h5>
+                    <h5>Extrair relatórios periódicos &ensp; &ensp; &ensp;</h5>
                     <p class="vantagens text-white">A ferramenta disponibiliza relatórios automáticos a partir do período informado pelo cliente.</p>
                 </div>
             </div>
