@@ -1,0 +1,83 @@
+.navbar-custom {
+  background-color: #333; /* Fundo escuro */
+  padding: 10px 0;
+}
+.navbar-brand img {
+  max-height: 60px;
+}
+.title-container {
+  text-align: center;
+  color: #b3d1ff;
+}
+.title-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.subtitle-text {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.btn-group-custom .btn {
+  margin: 0 5px;
+  border-radius: 0;
+}
+.nav-link {
+  color: #b3b3b3;
+  font-weight: bold;
+  border: 1px solid #888;
+  border-radius: 0;
+  padding: 8px 16px;
+  margin: 5px 2px;
+}
+.nav-link:hover {
+  color: #fff;
+}
+.info-box {
+  color: #ccc;
+  font-size: 0.85rem;
+  text-align: right;
+}
+.main-content {
+  padding: 20px;
+}
+.section-title {
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 20px;
+  text-align: center;
+}
+.feature-box {
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.featurette-heading {
+  font-weight: 400;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.vantagens {
+  height: 120px;
+}
+
+.sidebar a {
+  color: #b3d1ff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-weight: bold;
+}
+.sidebar a:hover {
+  background-color: #444;
+  color: #fff;
+}
