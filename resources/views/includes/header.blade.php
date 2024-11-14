@@ -36,7 +36,7 @@
                                     LOGIN
                                 @endguest
                                 @auth
-                                    ÁREA RETRITA
+                                    ÁREA RESTRITA
                                 @endauth
                                 
                             </a></button>

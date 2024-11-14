@@ -2,7 +2,7 @@
 
 <!-- Conteúdo Principal -->
 <div class="container main-content py-5">
-    <h2 class="font-weight-bold text-center mb-4">{{ __('Profile') }}</h2>
+    <h2 class="font-weight-bold text-center mb-4">{{ __('Perfil') }}</h2>
 
     <div class="row justify-content-center">
         <div class="col-md-8">
