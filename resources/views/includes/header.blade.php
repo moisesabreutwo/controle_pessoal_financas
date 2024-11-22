@@ -80,6 +80,9 @@
                             <a class="nav-link" href="{{ route('outros-videos') }}">OUTROS VÍDEOS</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contratar') }}">COMPRAR</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">CONTATO SUGESTÕES</a>
                         </li>
                     </ul>

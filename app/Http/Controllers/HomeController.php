@@ -21,4 +21,8 @@ class HomeController extends Controller
         return view('outros_videos');
     }
 
+    public function contratar(){
+        return view('contratar');
+    }
+
 }

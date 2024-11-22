@@ -23,6 +23,8 @@ Route::get('/contact', function () {
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::get('/videos-educacionais', [HomeController::class, 'videosEducacionais'])->name('videos-educacionais');
 Route::get('/outros-videos', [HomeController::class, 'outrosVideos'])->name('outros-videos');
+Route::get('/contratar', [HomeController::class, 'contratar'])->name('contratar');
+
 Route::get('/cliente', [IdentificacaoClienteController::class, 'createSite'])->name('cliente');
 Route::post('/cliente/store', [IdentificacaoClienteController::class, 'storeSite'])->name('cliente.store');
 Route::get('/dashboard', function () {

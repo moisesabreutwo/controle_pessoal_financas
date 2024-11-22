@@ -6,9 +6,6 @@
     <a href="{{ route('despesasDetalhe.index')}}">Despesas Detalhe</a>
     <a href="{{ route('despesasClassificacao.index')}}">Classificação Despesas</a>
     <a href="{{ route('dadosExcepcionais.index')}}">Dados excepcionais</a>
-    <a href="#">Local envio mensagens</a>
-    <a href="#">Cadastro UF</a>
-    <a href="#">Cadastro DDD</a>
     <a href="#">Aceitar cliente</a>
     <a href="#">Renovar cliente</a>
     <a href="{{ route('clientes.index') }}">Cadastro de clientes</a>
