@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\ReceitasDetalhe;
 use App\Models\ReceitasGrupo;
 use Illuminate\Http\Request;
+use App\Rules\UniqueReceitasDetalhe;
+
 
 class ReceitasDetalheController extends Controller
 {
     public function index()
     {
-        $detalhes = ReceitasDetalhe::with('grupo')->paginate(10);
+        $detalhes = ReceitasDetalhe::with('grupo')
+        ->orderBy('codigoReceitasGrupo')
+        ->orderBy('codigoReceitasDetalhe')
+        ->paginate(10);
         return view('admin.receitasDetalhe.index', compact('detalhes'));
     }
 
@@ -24,11 +29,17 @@ class ReceitasDetalheController extends Controller
     {
         $request->validate([
             'codigoReceitasGrupo' => 'required|string|max:4',
-            'codigoReceitasDetalhe' => 'required|string|max:4',
+            'codigoReceitasDetalhe' => [
+                'required',
+                'string',
+                'max:4',
+                new UniqueReceitasDetalhe($request->codigoReceitasGrupo),
+            ],
             'descricaoReceitasDetalhe' => 'required|string|max:40',
         ]);
-
+    
         ReceitasDetalhe::create($request->all());
+    
         return redirect()->route('receitasDetalhe.index')->with('success', 'Código Receita Detalhe incluído');
     }
 

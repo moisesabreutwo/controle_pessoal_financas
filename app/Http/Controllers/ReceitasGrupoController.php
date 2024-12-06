@@ -21,8 +21,10 @@ class ReceitasGrupoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'codigoReceitasGrupo' => 'required|string|max:4|unique:CPF_receitasGrupo',
+            'codigoReceitasGrupo' => 'required|string|max:4|unique:CPF_receitasGrupo,codigoReceitasGrupo',
             'descricaoReceitasGrupo' => 'required|string|max:40',
+        ], [
+            'codigoReceitasGrupo.unique' => 'O código informado já está em uso. Por favor, escolha outro.',
         ]);
 
         ReceitasGrupo::create($request->all());

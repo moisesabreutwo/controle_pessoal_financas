@@ -16,7 +16,7 @@
                     </div>
                 @endif
 
-                <h1>Lista de Grupos</h1>
+                <h1>Lista de Grupos de Despesas</h1>
                 <a href="{{ route('despesasGrupo.create') }}" class="btn btn-primary">Criar Novo Grupo</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">

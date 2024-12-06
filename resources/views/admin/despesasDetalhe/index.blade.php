@@ -18,7 +18,7 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>Código Grupo</th>
+                            <th>Grupo</th>
                             <th>Código Detalhe</th>
                             <th>Descrição Detalhe</th>
                             <th>Ações</th>
@@ -27,7 +27,7 @@
                     <tbody>
                         @foreach ($detalhes as $detalhe)
                             <tr>
-                                <td>{{ $detalhe->grupo->codigoDespesasGrupo }}</td>
+                                <td>{{ $detalhe->grupo->codigoDespesasGrupo }} - {{ $detalhe->grupo->descricaoDespesasGrupo }}</td>
                                 <td>{{ $detalhe->codigoDespesasDetalhe }}</td>
                                 <td>{{ $detalhe->descricaoDespesasDetalhe }}</td>
                                 <td>

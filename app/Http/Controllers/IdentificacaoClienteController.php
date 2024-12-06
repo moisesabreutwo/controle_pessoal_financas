@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DadosExcepcionais;
 use App\Models\IdentificacaoCliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -112,7 +113,9 @@ class IdentificacaoClienteController extends Controller
 
     public function createSite()
     {
-        return view('cliente');
+        $dados = DadosExcepcionais::first();
+        //dd($dadosExcep);
+        return view('cliente', compact('dados'));
     }
 
     public function storeSite(Request $request)
@@ -146,7 +149,14 @@ class IdentificacaoClienteController extends Controller
         $data['user_id'] = $user->id;
         IdentificacaoCliente::create($data);
 
-        return redirect()->route('cliente')->with('success', 'Cadastro realizado com sucesso!');
+        // Mensagem personalizada
+        $mensagem = "Prezado(a) {$data['nomeIdentificacaoCliente']}, Após realizado o pagamento, no prazo de 72 horas, as funcionalidades do Sistema Controle pessoal de finanças serão disponibilizadas. Dessa forma, para acessar o Sistema, deve-se utilizar o e-mail cadastrado e a senha que foi digitada.\n\nAcredite nesse seu projeto!";
+
+        return redirect()
+            ->route('cliente')
+            ->with('popupMessage', $mensagem)
+            ->with('success', 'Cadastro realizado com sucesso!');
+
     }
     
 }

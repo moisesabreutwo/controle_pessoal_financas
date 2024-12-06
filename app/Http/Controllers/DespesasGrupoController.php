@@ -21,8 +21,10 @@ class DespesasGrupoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'codigoDespesasGrupo' => 'required|string|max:4',
+            'codigoDespesasGrupo' => 'required|string|max:4|unique:CPF_despesasGrupo,codigoDespesasGrupo',
             'descricaoDespesasGrupo' => 'required|string|max:40',
+        ], [
+            'codigoDespesasGrupo.unique' => 'O código informado já está em uso. Por favor, escolha outro.',
         ]);
 
         DespesasGrupo::create($request->all());

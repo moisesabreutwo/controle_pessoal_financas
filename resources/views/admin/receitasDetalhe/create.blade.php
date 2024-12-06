@@ -25,17 +25,26 @@
                                 {{ $grupo->codigoReceitasGrupo }} - {{ $grupo->descricaoReceitasGrupo }}
                             </option>
                         @endforeach
+                        @error('codigoReceitasGrupo')
+                            <span style="color: red;">{{ $message }}</span>
+                        @enderror
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Código Detalhe:</label>
                     <input type="text" name="codigoReceitasDetalhe" class="form-control" maxlength="4" required>
+                    @error('codigoReceitasDetalhe')
+                        <span style="color: red;">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label>Descrição Detalhe:</label>
                     <input type="text" name="descricaoReceitasDetalhe" class="form-control" maxlength="40" required>
+                    @error('descricaoReceitasDetalhe')
+                        <span style="color: red;">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Salvar</button>

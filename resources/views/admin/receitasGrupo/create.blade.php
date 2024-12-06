@@ -18,11 +18,17 @@
                 <div class="form-group">
                     <label>Código:</label>
                     <input type="text" name="codigoReceitasGrupo" class="form-control" maxlength="4" required>
+                    @error('codigoReceitasGrupo')
+                        <span style="color: red;">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label>Descrição:</label>
                     <input type="text" name="descricaoReceitasGrupo" class="form-control" maxlength="40" required>
+                    @error('descricaoReceitasGrupo')
+                        <span style="color: red;">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Salvar</button>

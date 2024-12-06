@@ -20,13 +20,22 @@
                 <h1>Criar Novo Grupo</h1>
                 <form action="{{ route('despesasGrupo.store') }}" method="POST">
                     @csrf
-                    <label>Código:</label>
-                    <input type="text" name="codigoDespesasGrupo" maxlength="4" required>
+                    <div class="form-group">
+                        <label>Código:</label>
+                        <input type="text" name="codigoDespesasGrupo" class="form-control" maxlength="4" required>
+                        @error('codigoDespesasGrupo')
+                            <span style="color: red;">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricaoDespesasGrupo" class="form-control" maxlength="40" required>
+                        @error('descricaoDespesasGrupo')
+                            <span style="color: red;">{{ $message }}</span>
+                        @enderror
+                    </div>
                     
-                    <label>Descrição:</label>
-                    <input type="text" name="descricaoDespesasGrupo" maxlength="40" required>
-                    
-                    <button type="submit">Salvar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>
             </div>
         </div>
